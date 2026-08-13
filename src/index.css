@@ -1,0 +1,295 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 38 72% 42%;
+    --primary-foreground: 37 67% 95%;
+
+    --secondary: 38 60% 91%;
+    --secondary-foreground: 25 65% 7%;
+
+    --muted: 38 60% 91%;
+    --muted-foreground: 25 30% 30%;
+
+    --accent: 38 72% 42%;
+    --accent-foreground: 25 65% 7%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 19 40% 80%;
+    --input: 19 40% 80%;
+    --ring: 38 72% 42%;
+
+    --radius: 0.75rem;
+
+    --success: 142 76% 36%;
+    --success-foreground: 355.7 100% 97.3%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 48 96% 89%;
+
+    /* Wood-tone palette */
+    --espresso: 25 65% 7%;
+    --nogueira: 25 64% 14%;
+    --mogno:    19 55% 27%;
+    --creme:    38 60% 91%;
+    --linho:    37 67% 95%;
+    --dourado:  38 72% 42%;
+
+    --on-dark:        38 60% 91%;
+    --on-light:       25 65% 7%;
+    --on-dark-muted:  37 30% 75%;
+    --on-light-muted: 25 30% 30%;
+
+    /* Back-compat surface tokens (mapped to wood palette) */
+    --surface-0: var(--espresso);
+    --surface-1: var(--nogueira);
+    --surface-2: var(--creme);
+    --surface-3: var(--linho);
+    --on-surface: var(--on-dark);
+    --on-surface-muted: var(--on-dark-muted);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 22 96% 50%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 22 96% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(to right, hsl(var(--dourado)), hsl(var(--mogno)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--accent)/0.05) 100%);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1;
+  }
+  
+  .cta-pulse {
+    animation: pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-custom {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .8;
+    }
+  }
+
+  /* Base responsive layout */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Touch-friendly interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Responsive grid utilities */
+  .responsive-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  /* Responsive text scaling */
+  .responsive-text {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .responsive-heading {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    line-height: 1.2;
+  }
+
+  .responsive-hero-heading {
+    font-size: clamp(2rem, 8vw, 4rem);
+    line-height: 1.1;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    body {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    
+    /* Larger touch targets */
+    button, a, [role="button"] {
+      min-height: 48px;
+      min-width: 48px;
+      padding: 0.75rem 1rem;
+    }
+
+    /* Better mobile spacing */
+    .mobile-spacing {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    /* Mobile grid adjustments */
+    .responsive-grid {
+      gap: 1rem;
+    }
+  }
+
+  /* Tablet optimizations */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .responsive-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  /* Desktop optimizations */
+  @media (min-width: 1025px) {
+    .container {
+      max-width: 1200px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .responsive-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Large desktop optimizations */
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1400px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  /* High resolution displays */
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1600px;
+    }
+  }
+
+  /* Improve image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Better button responsiveness */
+  .responsive-button {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1rem, 4vw, 1.5rem);
+  }
+
+  /* Reveal animations after page load */
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* WhatBl: tracking marker for WhatsApp/contact CTAs.
+   Defensive rules so the class never breaks button styling on any device. */
+.WhatBl {
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+.WhatBl:hover,
+.WhatBl:focus,
+.WhatBl:active,
+.WhatBl:visited {
+  text-decoration: none !important;
+}
+.WhatBl > * {
+  pointer-events: none;
+}
