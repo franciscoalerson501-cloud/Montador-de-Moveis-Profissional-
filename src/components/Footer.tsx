@@ -10,7 +10,7 @@ const Footer = () => {
             </h3>
             <p className="text-on-dark-muted text-xs sm:text-sm leading-relaxed">
               Especialistas em montagem, desmontagem e conserto de móveis. 
-              Atendemos Votuporanga, Fernandópolis, Jales, Valentim Gentil e região 
+              Atendemos Fernandópolis, Jales, Votuporanga, Valentim Gentil e Região Noroeste Paulista 
               com qualidade e garantia.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 text-xs">
@@ -36,11 +36,11 @@ const Footer = () => {
           <div className="space-y-3 sm:space-y-4">
             <h4 className="font-display font-semibold text-dourado text-sm sm:text-base">Regiões Atendidas</h4>
             <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-on-dark-muted">
-              <li>📍 Votuporanga e bairros</li>
               <li>📍 Fernandópolis</li>
               <li>📍 Jales</li>
+              <li>📍 Votuporanga</li>
               <li>📍 Valentim Gentil</li>
-              <li>📍 Cidades próximas</li>
+              <li>📍 Região Noroeste Paulista</li>
             </ul>
           </div>
         </div>
