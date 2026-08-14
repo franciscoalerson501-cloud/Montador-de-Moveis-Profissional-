@@ -2,13 +2,10 @@ import { MapPin } from 'lucide-react';
 
 const regions = [
   { name: 'Fernandópolis', highlight: true },
-  { name: 'Votuporanga', highlight: true },
   { name: 'Jales', highlight: true },
+  { name: 'Votuporanga', highlight: true },
   { name: 'Valentim Gentil', highlight: true },
-  { name: "Mirassol d'Oeste", highlight: false },
-  { name: 'Cardoso', highlight: false },
-  { name: 'Entre', highlight: false },
-  { name: 'e Região', highlight: false },
+  { name: 'Região Noroeste Paulista', highlight: true },
 ];
 
 const RegionsCoverageSection = () => {
