@@ -56,7 +56,7 @@ const HeroSection = memo(() => {
       {/* Top banner full width */}
       <div className="bg-dourado text-on-light flex items-center justify-center gap-2 px-5 py-3 text-sm sm:text-base text-left font-medium">
         <Clock className="h-5 w-5 flex-shrink-0" />
-        <span className="text-xs">Agenda aberta hoje — Fernandópolis, Votuporanga, Jales e Região.</span>
+        <span className="text-xs">Agenda aberta hoje — Fernandópolis, Jales, Votuporanga, Valentim Gentil e Região Noroeste Paulista.</span>
       </div>
 
       <div className="flex-1 flex items-center justify-center px-4 py-8 sm:py-12 lg:py-16">
@@ -80,7 +80,7 @@ const HeroSection = memo(() => {
               className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-creme"
             >
               Montador de Móveis em{' '}
-              <span className="text-dourado">Fernandópolis</span>, Jales, Votuporanga e Região
+              <span className="text-dourado">Fernandópolis</span>, Jales, Votuporanga, Valentim Gentil e Região Noroeste Paulista
             </h1>
 
             {/* Subtitle */}
@@ -176,13 +176,5 @@ const HeroSection = memo(() => {
             <p className="text-sm sm:text-base text-on-dark-muted text-center sm:text-left">
               <span className="text-creme font-medium">Atendemos:</span>{' '}
               <span className="text-dourado font-medium">
-                Fernandópolis · Votuporanga · Jales · Valentim Gentil
-              </span>
-            </p>
-        </div>
-      </div>
-    </section>
-  );
-});
-
-export default HeroSection;
+                Fernandópolis · Jales · Votuporanga · Valentim Gentil · Região Noroeste Paulista
+  
