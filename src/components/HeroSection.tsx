@@ -177,4 +177,12 @@ const HeroSection = memo(() => {
               <span className="text-creme font-medium">Atendemos:</span>{' '}
               <span className="text-dourado font-medium">
                 Fernandópolis · Jales · Votuporanga · Valentim Gentil · Região Noroeste Paulista
-  
+              </span>
+            </p>
+        </div>
+      </div>
+    </section>
+  );
+});
+
+export default HeroSection;
