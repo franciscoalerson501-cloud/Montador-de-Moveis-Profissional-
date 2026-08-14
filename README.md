@@ -1,6 +1,6 @@
 # Montador de Móveis Pro
 
-Landing page otimizada para o domínio `montadordemoveispro.com.br`, com foco técnico equilibrado em Fernandópolis, Jales e Votuporanga..
+Landing page otimizada para o domínio `montadordemoveispro.com.br`, com foco técnico equilibrado em Fernandópolis, Jales e Votuporanga.
 
 O layout e a copy visível foram preservados. As mudanças estão concentradas em SEO técnico, dados estruturados, rastreabilidade, desempenho e remoção de código sem uso.
 
