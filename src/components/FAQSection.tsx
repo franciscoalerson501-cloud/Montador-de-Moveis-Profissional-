@@ -17,7 +17,7 @@ const FAQSection = () => {
     },
     {
       question: "Atendem quais cidades mesmo?",
-      answer: "Atendemos Votuporanga, Fernandópolis, Jales e toda região do noroeste paulista."
+      answer: "Atendemos Fernandópolis, Jales, Votuporanga, Valentim Gentil e toda a Região Noroeste Paulista."
     },
     {
       question: "Oferecem garantia nos serviços?",
@@ -29,7 +29,7 @@ const FAQSection = () => {
     },
     {
       question: "Qual o horário de atendimento?",
-      answer: "Atendemos de segunda a sábado, das 8h às 18h. WhatsApp disponível 24h para agendamentos."
+      answer: "Atendemos de segunda a sábado, das 7h às 18h. WhatsApp disponível 24h para agendamentos."
     }
   ];
 
@@ -44,7 +44,7 @@ const FAQSection = () => {
               Perguntas <span className="text-dourado">Frequentes</span>
             </h2>
             <p className="responsive-text text-on-light-muted max-w-2xl mx-auto">
-              Tire suas dúvidas sobre montagem, desmontagem e reparo de móveis em Votuporanga, Fernandópolis, Valentim Gentil, Jales e região
+              Tire suas dúvidas sobre montagem, desmontagem e reparo de móveis em Fernandópolis, Jales, Votuporanga, Valentim Gentil e Região Noroeste Paulista
             </p>
           </div>
 
