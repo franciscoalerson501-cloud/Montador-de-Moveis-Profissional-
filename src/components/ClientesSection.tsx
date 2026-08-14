@@ -60,7 +60,7 @@ const ClientesSection = () => {
             <span className="text-dourado">Satisfeitos</span>
           </h2>
           <p className="responsive-text text-on-light-muted max-w-2xl mx-auto">
-            Veja alguns dos trabalhos realizados em residências de Votuporanga, Fernandópolis, Jales e região
+            Veja alguns dos trabalhos realizados em residências de Fernandópolis, Jales, Votuporanga, Valentim Gentil e Região Noroeste Paulista
           </p>
         </div>
 
